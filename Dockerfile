@@ -1,5 +1,5 @@
 FROM node:8-alpine
-RUN apk update  && apk add nginx
+RUN apk update  && apk add nginx && mkdir /app
 WORKDIR /app
 COPY . /app/
 EXPOSE 80
