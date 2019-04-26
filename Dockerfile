@@ -4,4 +4,4 @@ WORKDIR /app
 COPY . /app/
 EXPOSE 80
 RUN  npm config set registry http://mirrors.cloud.tencent.com/npm/ && npm install && npm run build  && cp nginx.conf /etc/nginx/nginx.conf
-CMD ["nginx"]
+CMD ["nginx","-g","daemon off;"]
